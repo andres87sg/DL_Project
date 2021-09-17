@@ -101,7 +101,7 @@ print(elapsed_time)
 
 # Metadata
 patient_name = "Andres"
-ID = '12345'
+ID = '123456'
 genre = 'F'
 date = '02/02/21'
 study_name = 'CHEST CT'
