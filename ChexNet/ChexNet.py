@@ -231,7 +231,9 @@ model.load_weights(weights_path)
 
 
 #%%
+model2.save('/home/usuario/Descargas/ChexNet_NoFindings.h5')
 
+#%%
 #model.load_weights('/home/usuario/Descargas/mymodel.h5')
 
 
