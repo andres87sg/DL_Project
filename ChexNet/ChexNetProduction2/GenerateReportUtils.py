@@ -88,7 +88,7 @@ def generate_pdftemplate(patient_name,
     
     pdf.ln(2)
     pdf.set_font('Arial', 'B', 14)
-    pdf.cell(18, 0.5,'Patient information',align='C',border=0)
+    pdf.cell(18, 0.5,'Patient informationX',align='C',border=0)
     
     pdf.ln(0.5)
     pdf.line(pdf.x, pdf.y, pdf.x+18, pdf.y)
@@ -116,6 +116,7 @@ def generate_pdftemplate(patient_name,
     
     x_position = pdf.x
     pdf.x = x_position
+    pdf.set_font('Arial', 'B', 10)
     pdf.cell(5, 0.5,patient_name,align='C',border=border)
     
     x_position = pdf.x
@@ -143,16 +144,22 @@ def generate_pdftemplate(patient_name,
     x_position = pdf.x
     pdf.x = x_position
     pdf.cell(5, 0.5,'Date',align='C',border=border)
+    y_position = pdf.y
     
     pdf.set_text_color(0, 0,0)
+    pdf.set_font('Arial', '', 7)
     pdf.ln(1)
-    pdf.cell(5, 0.5,study_name,align='C',border=border)
+    pdf.multi_cell(5, 0.3,study_name,align='C',border=border)
     
-    x_position = pdf.x
-    pdf.x = x_position
+    #x_position = 10
+    pdf.y = 10.2
+    pdf.x = 6.5
+    pdf.set_font('Arial', '', 12)
     pdf.cell(5, 0.5,study_date,align='C',border=border)
         
-    pdf.ln(1)
+    #pdf.ln(1)
+    pdf.y = 12.2
+    pdf.x = 1.5
     pdf.set_text_color(32, 32,91)
     pdf.set_font('Arial', 'B', 14)
     pdf.cell(10, 1,'Evaluation description',align='L',border=border)
@@ -176,6 +183,7 @@ def generate_pdftemplate(patient_name,
     pdf.set_text_color(0,0,0) #DarkBlue
     pdf.set_font('Arial', '', 10)
     pdf.multi_cell(10,0.7, txt=label1 + ": "+ pred1 ,align='L',border=border)
+    #pdf.multi_cell(10,0.7, txt='Consolidation' + ": "+ pred1 ,align='L',border=border)
     pdf.multi_cell(10,0.7, txt=label2 + ": "+ pred2 ,align='L',border=border)
     pdf.multi_cell(10,0.7, txt=label3 + ": "+ pred3 ,align='L',border=border)
     
