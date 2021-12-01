@@ -380,7 +380,11 @@ history = model2.fit(train_set,steps_per_epoch=train_steps, validation_data=vali
 #callbacks=[mc,lr]
 
 #%%
-model2.save_weights('/home/usuario/Descargas/weights_model_15ft.h5')
+
+model2.load_weights('/home/usuario/Descargas/ChexNet_NoFindings.h5')
+
+#model2.save_weights('/home/usuario/Descargas/weights_model_15ft.h5')
+
 #model.save_weights('mymodel13082021.h5')
 
 
