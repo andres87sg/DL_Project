@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
+
 """
 Created on Tue Aug 10 09:01:21 2021
+
+Este código fue creado para adicionar la característica No 15 ("No Findings")
+al modelo de clasificacin patologas pulmonares
+
 
 @author: Andres
 """
